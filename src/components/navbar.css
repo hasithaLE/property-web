@@ -1,0 +1,100 @@
+/* General nav styling */
+nav {
+    background-color: rgba(0, 0, 0, 0.85); /* Darker transparent background */
+    padding: 10px 20px; /* Add vertical padding */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Subtle shadow for depth */
+    position: sticky; /* Make the navbar sticky */
+    top: 0; /* Stick to the top of the viewport */
+    z-index: 1000; /* Ensure it stays above other content */
+    display: flex; /* Horizontal layout */
+    justify-content: space-between; /* Space between logo and links */
+    align-items: center;
+    width: 100%; /* Make the navbar take full width */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+/* Styling the count next to Favorites */
+.favorite-count {
+    font-size: 14px;
+    background-color: #f1c40f;
+    color: white;
+    border-radius: 50%;
+    padding: 2px 8px;
+    margin-left: 5px;
+  }
+
+/* Logo section (if needed) */
+nav .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+}
+
+nav .logoname {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    text-transform: uppercase;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav .logoname :hover {
+    color: #f1c40f; /* Highlight on hover (golden color) */
+}
+
+/* Styling the links container */
+nav .nav-links {
+    display: flex;
+    gap: 25px; /* Space between items */
+    align-items: center;
+}
+
+/* Styling each link */
+nav .nav-links a {
+    text-decoration: none;
+    font-size: 18px;
+    color: white; /* White text */
+    padding: 10px 15px; /* Add padding for clickable area */
+    border: 2px solid transparent; /* No visible border by default */
+    border-radius: 4px; /* Smooth corners */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect */
+nav .nav-links a:hover {
+    border: 2px solid #f1c40f; /* Golden border on hover */
+    background-color: rgba(255, 255, 255, 0.1); /* Slight highlight */
+    color: #f1c40f; /* Golden text on hover */
+}
+
+/* Active link indication */
+nav .nav-links a.active {
+    border: 2px solid #f1c40f; /* Golden border for active links */
+    color: #f1c40f;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+    nav {
+        flex-direction: column; /* Stack logo and links vertically */
+        align-items: flex-start;
+        padding: 10px;
+    }
+
+    nav .nav-links {
+        flex-direction: column; /* Stack links vertically */
+        gap: 15px;
+        width: 100%; /* Full width for easier navigation */
+    }
+
+    nav .nav-links a {
+        width: 100%; /* Stretch links to fill the container */
+        text-align: left; /* Align text to the left */
+        padding: 10px 20px; /* Add more padding for larger touch areas */
+    }
+}

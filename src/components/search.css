@@ -1,0 +1,85 @@
+/* General form styling */
+form {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: grid;
+    gap: 15px; /* Adds spacing between rows */
+  }
+  
+  /* Grid layout for form fields */
+  .form-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 columns */
+    gap: 10px; /* Space between columns */
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  input,
+  select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    box-sizing: border-box;
+  }
+  
+  /* Input focus styles */
+  input:focus,
+  select:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 4px rgba(0, 123, 255, 0.25);
+  }
+  
+  /* Button styling */
+  button {
+    display: inline-block;
+    width: 100%;
+    padding: 10px 15px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive design for smaller screens */
+  @media (max-width: 768px) {
+    .form-row {
+      grid-template-columns: 1fr; /* Stacks fields on smaller screens */
+    }
+  
+    form {
+      padding: 15px;
+    }
+  
+    input,
+    select {
+      font-size: 13px;
+    }
+  
+    button {
+      font-size: 14px;
+    }
+  }
+  

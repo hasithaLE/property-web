@@ -1,0 +1,143 @@
+/* Container for results */
+.results-container {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  padding: 16px;
+  max-width: 1280px;
+  width: 50%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+/* Property Card */
+.property-card {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  background-color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.property-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Image Section */
+.property-image {
+  flex: 1;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.property-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Details Section */
+.property-details {
+  flex: 2;
+  padding: 16px;
+}
+
+.property-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.property-location {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.property-features {
+  color: #555;
+  display: flex;
+  /* Enables Flexbox */
+  justify-content: center;
+  /* Centers horizontally */
+  align-items: center;
+  /* Centers vertically */
+  gap: 10px;
+  /* Space between the icons and text */
+  margin: 10px 0;
+  /* Optional: Adjust vertical spacing */
+  text-align: center;
+  /* Ensures text alignment if needed */
+}
+
+.property-price {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+/* Actions Section */
+.property-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.contact-btn,
+.save-btn {
+  padding: 10px 20px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.contact-btn {
+  background-color: #007bff;
+  color: #fff;
+}
+
+.contact-btn:hover {
+  background-color: #0056b3;
+}
+
+.save-btn {
+  background-color: #28a745;
+  color: #fff;
+}
+
+.save-btn:hover {
+  background-color: #1c7c2f;
+}
+
+.fa-heart {
+  font-size: 2em;
+}
+
+.fa-heart.liked {
+  color: red;
+  font-size: 2em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .property-card {
+    flex-direction: column;
+  }
+
+  .property-image {
+    max-width: 100%;
+    height: 200px;
+  }
+
+  .property-details {
+    padding: 12px;
+  }
+}

@@ -5,7 +5,7 @@
   gap: 16px;
   padding: 16px;
   max-width: 1280px;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
   padding: 2rem;
   text-align: center;
@@ -125,6 +125,17 @@
   color: red;
   font-size: 2em;
 }
+
+.property-card {
+  cursor: grab; /* Indicate draggable item */
+}
+
+.property-card:active {
+  cursor: grabbing; /* Change cursor when dragging */
+  opacity: 0.8; /* Slightly dim the property card while dragging */
+  transform: scale(0.95); /* Add a slight scaling effect */
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {

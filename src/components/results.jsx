@@ -7,13 +7,20 @@ function Results({ properties, handleAddToFavorites, favorites = [], navigate })
   };
 
   const handleViewMore = (id) => {
-    navigate(`/property/${id}`);  // Navigate to Property page with property id
+    navigate(`/property/${id}`); // Navigate to Property page with property id
   };
 
   return (
     <div className="results-container">
       {properties.map((property) => (
-        <div key={property.id} className="property-card">
+        <div
+          key={property.id}
+          className="property-card"
+          draggable
+          onDragStart={(e) =>
+            e.dataTransfer.setData("property", JSON.stringify(property))
+          } // Handle drag start
+        >
           {/* Property Image */}
           <div className="property-image">
             <img src={property.images[0]} alt={property.shortDescription} />
@@ -40,14 +47,16 @@ function Results({ properties, handleAddToFavorites, favorites = [], navigate })
             <div className="property-actions">
               <button
                 className="view-more-btn"
-                onClick={() => handleViewMore(property.id)} // Navigate with property ID
+                onClick={() => handleViewMore(property.id)}
               >
                 View More
               </button>
               <i
-                className={`fa-solid fa-heart ${isFavorite(property) ? 'liked' : ''}`}
+                className={`fa-solid fa-heart ${
+                  isFavorite(property) ? "liked" : ""
+                }`}
                 onClick={() => handleAddToFavorites(property)}
-                style={{ cursor: 'pointer', color: isFavorite(property) ? 'red' : 'gray' }}
+                style={{ cursor: "pointer", color: isFavorite(property) ? "red" : "gray" }}
               ></i>
             </div>
           </div>

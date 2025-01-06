@@ -4,7 +4,7 @@ import SearchForm from "../components/search";
 import properties from "../properties.json";
 import Results from "../components/results";
 import { useState, useEffect } from "react";
-import Favorites from "../components/favorites"; // Import Favorites component
+import Favorites from "../components/favorites";
 
 function Feed() {
   const [results, setResults] = useState([]);
